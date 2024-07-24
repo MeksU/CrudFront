@@ -1,0 +1,66 @@
+.homepage {
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+  
+.home-campaigns {
+    color: #8D493A;
+    text-align: center;
+}
+  
+.campaign-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+  
+.campaign-item {
+    padding: 10px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    overflow-wrap: break-word;
+}
+
+.campaign-item p {
+    margin: 5px;
+    padding: 0;
+}
+
+.campaign-item h3 {
+    margin: 0 5px 5px 5px;
+    padding: 0;
+}
+  
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+  
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.edit-button:hover {
+    background-color: #45a049;
+}
+  
+.delete-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+.delete-button:hover {
+    background-color: #e53935;
+}

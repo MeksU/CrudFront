@@ -1,30 +1,22 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
-import CampaignsPage from './pages/CampaignsPage';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import HomePage from './components/HomePage';
+import AddCampaign from './components/AddCampaign';
+import EditCampaign from './components/EditCampaign';
 
 const App = () => {
-  const [userId, setUserId] = useState(null);
-
-  const handleLogin = (id) => {
-    setUserId(id);
-  };
-
+  useEffect(() => {
+    document.body.style.zoom = '110%';
+  }, []);
   return (
     <Router>
       <Routes>
-        <Route 
-          path="/login" 
-          element={<LoginPage onLogin={handleLogin} />} 
-        />
-        <Route 
-          path="/campaigns" 
-          element={userId ? <CampaignsPage userId={userId} /> : <Navigate to="/login" />} 
-        />
-        <Route 
-          path="*" 
-          element={<Navigate to="/login" />} 
-        />
+        <Route path="/" element={ <LoginPage/> } />
+        <Route path="/home" element={ <HomePage/> } />
+        <Route path="/add-campaign" element={ <AddCampaign/> } />
+        <Route path="/edit-campaign/:id" element={ <EditCampaign/> } />
+        <Route path="*" element={ <HomePage/> } />
       </Routes>
     </Router>
   );

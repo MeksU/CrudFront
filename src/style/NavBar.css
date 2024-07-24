@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8D493A;
+    padding: 0 20px;
+    height: 60px;
+    color: white;
+}
+
+.navbar-left {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-left h1 {
+    font-size: 25px;
+    cursor: pointer;
+}
+  
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    font-style: none;
+}
+  
+.nav-button {
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    opacity: 0.8;
+}
